@@ -25,12 +25,17 @@
 Sistem, sorumlulukların ayrılması ilkesine uygun olarak iki farklı çalışma moduna (Oturum Rolüne) sahiptir. Giriş yapılan role göre tüm arayüz, sinyaller ve veri akışı dinamik olarak filtrelenir.
 
 ### 🛡️ Yönetici (Admin) Kümesi
-* **Merkezi Envitasyon Yönetimi:** Yeni etkinliklerin (Konser, Tiyatro, Teknoloji Zirvesi vb.) sisteme tanımlanması, lokasyon, zaman dalgalanması ve kontenjan sınırlarının (Kapasite) milisaniyelik takibi.
+* **Merkezi Etkinlik Yönetimi:** Yeni etkinliklerin (Konser, Tiyatro, Teknoloji Zirvesi, Festival vb.) sisteme tanımlanması; lokasyon, zaman dalgalanması ve kontenjan sınırlarının (Kapasite ve Katılımcı Sayısı) milisaniyelik takibi.
 * **Granüler Fiyatlandırma Motoru:** Her etkinlik için `Sahne Önü Yetişkin`, `Sahne Önü Öğrenci`, `Sahne Arkası Yetişkin` ve `Sahne Arkası Öğrenci` olmak üzere 4 farklı dinamik fiyat matrisi belirleyebilme.
-* **Analitik Dashboard:** Toplam ciro, bilet satış oranları ve kullanıcı eğilimlerinin **Matplotlib** tabanlı pasta grafikleriyle (Pie Chart) anlık veri görselleştirmesi.
-* **İdari Müdahale & İptal:** Sistemdeki tüm bilet ve rezervasyon kayıtlarını benzersiz bilet kodları üzerinden izleme, arama ve gerektiğinde idari olarak bilet iptal süreçlerini yönetme.
+* **Analitik Dashboard:** Toplam ciro, bilet satış oranları ve kullanıcı eğilimlerinin **Matplotlib** tabanlı pasta grafiklerle (Pie Chart) anlık veri görselleştirmesi.
+* **İdari Müdahale & İptal:** Sistemdeki tüm bilet ve rezervasyon kayıtlarını benzersiz bilet kodları üzerinden izleme, arama ve gerektiğinde bilet iptal süreçlerini tek tıkla yönetme.
 
 ### 👥 Kullanıcı (Müşteri) Kümesi
-* **Akıllı Rezervasyon Sihirbazı:** Etkinlik Seçimi $\rightarrow$ Alan Tercihi (Sahne Önü/Arkası) $\rightarrow$ Tarife Seçimi (Yetişkin/Öğrenci) adımlarını izleyen, koltuk kapasitesini anlık doğrulayan rezervasyon mimarisi.
-* **Kriptografik Bilet Kodu:** Her başarılı bilet satışı için sistem tarafından benzersiz, çakışmasız ve doğrulanabilir bilet algoritmik kod üretimi.
-* **K
+* **Akıllı Rezervasyon Sihirbazı:** Etkinlik Seçimi $\rightarrow$ Alan Tercihi (Sahne Önü/Arkası) $\rightarrow$ Tarife Seçimi (Yetişkin/Öğrenci) adımlarını izleyen, koltuk kapasitesini anlık doğrulayan ve toplam tutarı dinamik hesaplayan rezervasyon mimarisi.
+* **Kriptografik Bilet Kodu:** Her başarılı bilet satışı için sistem tarafından benzersiz, çakışmasız ve doğrulanabilir algoritmik bilet kodlarının üretimi.
+* **Kişiselleştirilmiş Favori Algoritması:** Kullanıcıların ilgi duyduğu etkinlikleri takibe almasını sağlayan, veritabanında asenkron güncellenen favori listesi.
+* **Gelişmiş Arayüz Özelleştirme:** Kullanıcı bazlı saklanan Koyu (Dark Mode) / Açık (Light Mode) tema kombinasyonları, 8 farklı canlı aksan renk seçeneği (Kırmızı, Mavi, Yeşil, Mor vb.) ve özel `QPainter` çizimli dinamik avatar paleti.
+
+---
+
+## 🏗️ Sistem Mimarisi & Katmanlar
