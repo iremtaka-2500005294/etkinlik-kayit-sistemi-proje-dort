@@ -4,11 +4,6 @@ Masaüstü tabanlı bir etkinlik yönetim ve bilet rezervasyon uygulaması. Pyth
 
 ---
 
-## Projeyi Neden Yaptım
-
-Okul projesi kapsamında gerçek hayatta kullanılabilecek bir masaüstü uygulama geliştirmek istedim. Konser, konferans ya da festival gibi etkinliklere bilet almak ve yönetmek için basit ama işlevsel bir sistem kurmayı hedefledim. Hem admin hem de normal kullanıcı tarafını ele aldım.
-
----
 
 ## Ne Yapıyor?
 
